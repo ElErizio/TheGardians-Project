@@ -18,7 +18,6 @@ public class ProyectilPiedra : MonoBehaviour
             rigidB.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
-
     // Propiedades de la piedra si es click es presionado
     private void OnMouseDown()
     {
@@ -41,4 +40,8 @@ public class ProyectilPiedra : MonoBehaviour
         this.enabled = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject, 3f);
+    }
 }

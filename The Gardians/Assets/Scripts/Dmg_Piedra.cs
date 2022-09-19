@@ -17,9 +17,13 @@ public class Dmg_Piedra : MonoBehaviour
             enemy.TakeHit(Dmg);
         }
 
+        var paredLadrillo = collision.collider.GetComponent<VidaPared>();
+        if (paredLadrillo)
+        {
+            paredLadrillo.TakeHit(Dmg);
+        }
         /* Todavía estoy por ver despues de cuanto vamos a hacer que desaparezca el proyectil lanzado
         Destroy(gameObject):
         */
     }
-
 }

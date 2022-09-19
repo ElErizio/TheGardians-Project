@@ -14,7 +14,6 @@ public class VidaEnemigos : MonoBehaviour
         // Indicamos recien ejecutado el proyecto que la vida del enemigo sea igual a la vida maxima
         HP = MaxHP; 
     }
-
     public void TakeHit(float dmg)
     { 
         HP -= dmg;
