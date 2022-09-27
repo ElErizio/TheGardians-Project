@@ -19,7 +19,11 @@ public class VidaEnemigos : MonoBehaviour
         HP -= dmg;
         if (HP <= 0)
         {
+            // Aquí probablemente vamos a agregar una funcion para que le reste 1 al valor de CantidadEnemigos en "EjemploPerder"
+            // y luego ejecutar un if para ver si Ganó el jugador y sacar la escena de "GameOver"
+
             Destroy(gameObject);
         }
+
     }
 }
