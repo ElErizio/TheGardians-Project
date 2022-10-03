@@ -7,11 +7,6 @@ public class BotonR : MonoBehaviour
 {
     int escenasR;
 
-    void Update()
-    {
-
-    }
-
     public void EscenasJuego()
     {
         // Codigo para hacer que escenasR tenga un valor Entero random entre 1 y 3 (El 4 está pueto porque el rango no incluye el valor maximo) 
@@ -28,7 +23,6 @@ public class BotonR : MonoBehaviour
 
             case 3: SceneManager.LoadScene("Level 3");
                 break;
-
         }
     }
 }

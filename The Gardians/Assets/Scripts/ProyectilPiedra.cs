@@ -10,7 +10,6 @@ public class ProyectilPiedra : MonoBehaviour
     // Valor para la cantidad de tiempo para liberar el proyectil del SpringJoint2D
     public float tiempoparaLiberar = .15f;
 
-
     private void Update()
     {
         if (esPresionado)
