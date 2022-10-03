@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ejemploPerder : MonoBehaviour
 {
     private int CantidadEnemigos; 
+
     // Update is called once per frame
     void Start()
     {   
