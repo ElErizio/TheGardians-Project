@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ejemploPerder : MonoBehaviour
 {
-    private int CantidadEnemigos; 
+    private int cantidadEnemigos = default; 
 
-    // Update is called once per frame
     void Start()
     {   
-        CantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 }

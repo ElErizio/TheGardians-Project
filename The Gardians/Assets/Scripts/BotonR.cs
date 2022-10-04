@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BotonR : MonoBehaviour
 {
-    int escenasR;
+    int escenasR = default;
 
     public void EscenasJuego()
     {

@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class BotonesMenu : MonoBehaviour
 {
-    // Codigo para lanzar el nivel 1
-    public void Botonjugar()
+    public void BotonJugar()
     {
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void Botonsalir()
+    public void BotonSeleccion()
     {
-        SceneManager.LoadScene("NivelSeleecion");
+        SceneManager.LoadScene("NivelSeleccion");
     }
 }
