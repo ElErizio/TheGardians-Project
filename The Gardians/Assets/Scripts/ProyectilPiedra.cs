@@ -17,12 +17,14 @@ public class ProyectilPiedra : MonoBehaviour
             rigidB.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
+
     // Propiedades de la piedra si es click es presionado
     private void OnMouseDown()
     {
         esPresionado = true;
         rigidB.isKinematic = true;
     }
+
     // Propiedades de la piedra si el click no es presionado
     private void OnMouseUp()
     {

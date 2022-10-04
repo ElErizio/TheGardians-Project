@@ -9,8 +9,8 @@ public class EsperaCamara : MonoBehaviour
     public int tiempoEspera = 4;
     [SerializeField] private Transform proyectil;
     [SerializeField] private CinemachineVirtualCamera camara;
+ 
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(esperarCamara());      
@@ -20,6 +20,5 @@ public class EsperaCamara : MonoBehaviour
     {
         yield return new WaitForSeconds(tiempoEspera);
         camara.Follow = proyectil; 
-        // GetComponent<CinemachineVirtualCamera>().Follow; <--- intento fallido de seguimiento de proyectil
     }
 }
