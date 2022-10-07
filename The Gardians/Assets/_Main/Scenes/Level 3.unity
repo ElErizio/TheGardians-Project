@@ -1391,8 +1391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5d6bbc73de5f942a663883c7adaf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidB: {fileID: 1007329819}
-  tiempoparaLiberar: 0.15
+  _rigidB: {fileID: 1007329819}
+  _tiempoparaLiberar: 0.15
 --- !u!114 &1007329825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87b589062ffb3740ae8e0599e91b874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dmg: 12
+  _Dmg: 12
 --- !u!1 &1032521403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,9 +1963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b810275c499dd4a9566eb69339e890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoEspera: 4
-  proyectil: {fileID: 1007329822}
-  camara: {fileID: 56702893}
+  _tiempoEspera: 4
+  _proyectil: {fileID: 1007329822}
+  _camara: {fileID: 56702893}
 --- !u!4 &1767814283
 Transform:
   m_ObjectHideFlags: 0
