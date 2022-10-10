@@ -25,4 +25,8 @@ public class BotonR : MonoBehaviour
                 break;
         }
     }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

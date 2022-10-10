@@ -9,9 +9,12 @@ public class BotonesMenu : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
-
     public void BotonSeleccion()
     {
         SceneManager.LoadScene("NivelSeleccion");
+    }
+    public void ExitButtom()
+    {
+        Application.Quit();
     }
 }
