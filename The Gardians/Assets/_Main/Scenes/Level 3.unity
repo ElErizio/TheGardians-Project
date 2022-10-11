@@ -769,7 +769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.23544, y: -22.691109, z: -10}
+  m_LocalPosition: {x: 48.377285, y: -22.691826, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2145,6 +2145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767814283}
   - component: {fileID: 1767814282}
+  - component: {fileID: 1767814284}
   m_Layer: 0
   m_Name: Mamalon
   m_TagString: Untagged
@@ -2181,6 +2182,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767814284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767814281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443c7187fcc21524780f75f3122e81aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863332717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2468,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 976006075}
     m_Modifications:
+    - target: {fileID: 3612951042874023170, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
+      propertyPath: _gameOver
+      value: 
+      objectReference: {fileID: 1767814284}
+    - target: {fileID: 3612951042874023170, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
+      propertyPath: _ejemploPerder
+      value: 
+      objectReference: {fileID: 1767814284}
     - target: {fileID: 3612951042874023171, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2589,6 +2610,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 976006075}
     m_Modifications:
+    - target: {fileID: 3612951042874023170, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
+      propertyPath: _gameOver
+      value: 
+      objectReference: {fileID: 1767814284}
+    - target: {fileID: 3612951042874023170, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
+      propertyPath: _ejemploPerder
+      value: 
+      objectReference: {fileID: 1767814284}
     - target: {fileID: 3612951042874023171, guid: 314b74adcf294294da4a34b5d6e9e172, type: 3}
       propertyPath: m_RootOrder
       value: 0

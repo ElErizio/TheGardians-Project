@@ -15,7 +15,7 @@ public class BotonR : MonoBehaviour
         switch (_escenasR)
         {
             // Codigo para poner cada unas de las escenas
-            case 1: SceneManager.LoadScene("SampleScene");
+            case 1: SceneManager.LoadScene("Level 1");
                 break;
 
             case 2: SceneManager.LoadScene("Level 2");

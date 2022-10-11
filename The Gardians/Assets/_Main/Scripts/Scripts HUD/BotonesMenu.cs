@@ -7,11 +7,15 @@ public class BotonesMenu : MonoBehaviour
 {
     public void BotonJugar()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level 1");
     }
     public void BotonSeleccion()
     {
         SceneManager.LoadScene("NivelSeleccion");
+    }
+    public void PrincipalMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
     }
     public void ExitButtom()
     {

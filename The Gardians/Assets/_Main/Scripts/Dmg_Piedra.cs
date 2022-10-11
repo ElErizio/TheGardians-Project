@@ -22,8 +22,5 @@ public class Dmg_Piedra : MonoBehaviour
         {
             paredLadrillo.TakeHit(_Dmg);
         }
-        /* Todavía estoy por ver despues de cuanto vamos a hacer que desaparezca el proyectil lanzado
-        Destroy(gameObject):
-        */
     }
 }

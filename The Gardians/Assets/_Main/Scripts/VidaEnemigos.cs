@@ -7,6 +7,7 @@ public class VidaEnemigos : MonoBehaviour
     // Variables necesarias para los puntos de vida del enemigo
     public float _HP; //Puntos de vida
     public float _MaxHP = 10; // Vida Maxima
+    [SerializeField] private GameOver _gameOver;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class VidaEnemigos : MonoBehaviour
     { 
         _HP -= dmg;
         if (_HP <= 0)
-        {
+        {           
+            _gameOver.SubstractEnemyCounter();
             Destroy(gameObject);
         }
     }
