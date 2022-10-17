@@ -13,12 +13,17 @@ public class BotonesMenu : MonoBehaviour
     {
         SceneManager.LoadScene("NivelSeleccion");
     }
-    public void PrincipalMenu()
+    public void MainMenu()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MainMenu");
     }
     public void ExitButtom()
     {
         Application.Quit();
     }
+    public void BackButtom()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
