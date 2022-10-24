@@ -34,8 +34,8 @@ public class ProyectilPiedra : MonoBehaviour
     }
 
     // Codigo para liberar el proyectil
-    IEnumerator Release() {
-
+    IEnumerator Release() 
+    {
         yield return new WaitForSeconds(_tiempoparaLiberar);
         GetComponent<SpringJoint2D>().enabled = false;
         this.enabled = false;

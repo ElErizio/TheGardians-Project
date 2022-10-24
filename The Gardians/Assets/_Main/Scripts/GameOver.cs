@@ -16,14 +16,14 @@ public class GameOver : MonoBehaviour
     }
     private void Update()
     {
-        GameOverScreen();
+        WinScreen();
     }
-    public void GameOverScreen()
+    public void WinScreen()
     {
         // Codigo para poder cargar la escena de "Ganaste"
         if (_cantidadEnemigos == 0)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }

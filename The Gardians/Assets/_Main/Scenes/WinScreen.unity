@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 386020498}
   - component: {fileID: 386020497}
   m_Layer: 5
-  m_Name: ULose
+  m_Name: UWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Men\xFA principal"
+  m_Text: Menu principal
 --- !u!222 &908576624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 1572596110}
   - component: {fileID: 1572596109}
   m_Layer: 5
-  m_Name: Button
+  m_Name: MainMenuButtom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,7 +661,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1498616368}
         m_TargetAssemblyTypeName: BotonesMenu, Assembly-CSharp
-        m_MethodName: PrincipalMenu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
