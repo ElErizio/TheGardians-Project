@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dmg_Piedra : MonoBehaviour
+public class EggDamage : MonoBehaviour
 {
-    // Variable con la cantidad de daño que puede hacer el proyectil
-    public float _Dmg = 12f;
+    public float _Dmg = 5f;
 
     // Funcion para que cuando colisione el poryectil haga X cantidad de daño
     private void OnCollisionEnter2D(Collision2D collision)
