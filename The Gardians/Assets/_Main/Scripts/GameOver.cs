@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public int _SecondsForWinScreen = 3;
     private int _cantidadEnemigos = default; 
     void Start()
     {   
@@ -16,13 +17,14 @@ public class GameOver : MonoBehaviour
     }
     private void Update()
     {
-        WinScreen();
+       StartCoroutine(WinScreen());
     }
-    public void WinScreen()
+    IEnumerator WinScreen()
     {
         // Codigo para poder cargar la escena de "Ganaste"
         if (_cantidadEnemigos == 0)
         {
+            yield return new WaitForSeconds(_SecondsForWinScreen);
             SceneManager.LoadScene("WinScreen");
         }
     }

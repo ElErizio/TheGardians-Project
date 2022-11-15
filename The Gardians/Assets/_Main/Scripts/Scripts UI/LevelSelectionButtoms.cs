@@ -17,4 +17,8 @@ public class LevelSelectionButtoms : MonoBehaviour
     {
         SceneManager.LoadScene("Level 3");
     }
+    public void Level4()
+    {
+        SceneManager.LoadScene("Level 4");
+    }
 }

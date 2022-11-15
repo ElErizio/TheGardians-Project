@@ -24,4 +24,17 @@ public class VidaEnemigos : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D colliInfo)
+    {
+        if (colliInfo.relativeVelocity.magnitude > _HP)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        _gameOver.SubstractEnemyCounter();
+        Destroy(gameObject);
+    }
 }
