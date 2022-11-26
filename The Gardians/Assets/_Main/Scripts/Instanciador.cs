@@ -14,9 +14,9 @@ public class Instanciador : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (coll.gameObject.tag == "EggProjectile")
+        if (col.gameObject.tag == "AcornProjectile")
         {
             Instantiate(NextProjectile, transform.position, transform.rotation);
         }
