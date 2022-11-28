@@ -16,10 +16,30 @@ public class EggDamage : MonoBehaviour
             enemy.TakeHit(_Dmg);
         }
 
-        var paredLadrillo = collision.collider.GetComponent<VidaPared>();
-        if (paredLadrillo)
+        var stoneWall = collision.collider.GetComponent<VidaStone>();
+        if (stoneWall)
         {
-            paredLadrillo.TakeHit(_Dmg);
+            stoneWall.TakeHit(_Dmg);
+        }
+        var iceWall = collision.collider.GetComponent<VidaIce>();
+        if (iceWall)
+        {
+            iceWall.TakeHit(_Dmg);
+        }
+        var woodWall = collision.collider.GetComponent<VidaWood>();
+        if (woodWall)
+        {
+            woodWall.TakeHit(_Dmg);
+        }
+        var glassWall = collision.collider.GetComponent<VidaGlass>();
+        if (glassWall)
+        {
+            glassWall.TakeHit(_Dmg);
+        }
+        var bricksWall = collision.collider.GetComponent<VidaBricks>();
+        if (bricksWall)
+        {
+            bricksWall.TakeHit(_Dmg);
         }
     }
 }
