@@ -2,40 +2,28 @@ using Cinemachine;
 using System.Collections;
 using UnityEngine;
 
-public class Instanciador : Singleton<Instanciador>
+public class Instanciador : MonoBehaviour
 {
-    public GameObject NextProjectile;
+    public static Instanciador Instance { get; private set; }
+    [SerializeField] private GameObject _projectilePrefab;
     // Valores de el tiempo de espera de la camara antes de moverse, El Proyectil Al que vamos a seguir y La camara que se va a mover
-    public int _tiempoEspera = 3;
-    [SerializeField] private CinemachineVirtualCamera _camara;
+    [SerializeField] private int _waitingTime = 3;
+    [SerializeField] private CinemachineVirtualCamera _camara = null;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(_tiempoEspera);
-        var newProjectile = Instantiate(NextProjectile, transform.position, transform.rotation);
-        _camara.Follow = newProjectile.transform;
-    }
-    
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        /*
-        Destroy(gameObject, 3f);
+        yield return new WaitForSeconds(_waitingTime);
         InstantiateProjectile();
-        
-        if (col.gameObject.tag == "AcornProjectile")
-        {
-            var newProjectile = Instantiate(NextProjectile, transform.position, transform.rotation);
-            _camara.Follow = newProjectile.transform;
-        }
-        */
     }
-    
+
     public void InstantiateProjectile()
     {
-            var newProjectile = Instantiate(NextProjectile, transform.position, transform.rotation);
-            _camara.Follow = newProjectile.transform;
-
+        var newProjectile = Instantiate(_projectilePrefab, transform.position, transform.rotation);
+        _camara.Follow = newProjectile.transform.GetChild(0);
     }
-
 }

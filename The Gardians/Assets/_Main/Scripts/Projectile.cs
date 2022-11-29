@@ -1,17 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     // Bool para saber si el click es presionado
-    private bool _isPressed = false;
-    public Rigidbody2D _rigidB;
+    [SerializeField] private bool _isPressed = false;
+    // Estas 2 variables no las puedo dejar privadas porque sino no funciona la resortera
+    public Rigidbody2D _rigidBody;
     public Rigidbody2D _hook;
-    public float _maxDragDistance = 8.0f;
+    [SerializeField] private float _maxDragDistance = 8.0f;
     // Valor para la cantidad de tiempo para liberar el proyectil del SpringJoint2D
-    public float _releaseTime = .15f;
-    private Instanciador instanciador;
+    [SerializeField] private float _releaseTime = .15f;
+    [SerializeField] private float _lifeSpan = 10f;
+
     private void Update()
     {
         if (_isPressed)
@@ -21,47 +22,55 @@ public class Projectile : MonoBehaviour
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (Vector3.Distance(_hook.position, mousePos) > _maxDragDistance)
             {
-                _rigidB.position = _hook.position + (mousePos - _hook.position).normalized * _maxDragDistance;
+                _rigidBody.position = _hook.position + (mousePos - _hook.position).normalized * _maxDragDistance;
             }
             else
             {
-                _rigidB.position = mousePos;
+                _rigidBody.position = mousePos;
             }
         }
     }
-    private void Start()
-    { 
-        instanciador = Instanciador.Instance;
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(_lifeSpan);
+        DestroyProjectile();
     }
-        
+
+    private void DestroyProjectile()
+    {
+        Instanciador.Instance.InstantiateProjectile();
+        Destroy(transform.parent.gameObject);
+    }
 
     // Propiedades del projectile si es click es presionado
     private void OnMouseDown()
     {
         _isPressed = true;
-        _rigidB.isKinematic = true;
+        _rigidBody.isKinematic = true;
     }
 
     // Propiedades del proyectil si el click no es presionado
     private void OnMouseUp()
     {
         _isPressed = false;
-        _rigidB.isKinematic = false;
+        _rigidBody.isKinematic = false;
         StartCoroutine(Release());
     }
 
     // Codigo para liberar el proyectil
-    IEnumerator Release() 
+    IEnumerator Release()
     {
         yield return new WaitForSeconds(_releaseTime);
         GetComponent<SpringJoint2D>().enabled = false;
         this.enabled = false;
     }
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {       
-        Destroy(gameObject, 3f);
-        instanciador.InstantiateProjectile();
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            DestroyProjectile();
+        }
     }
-    */
 }

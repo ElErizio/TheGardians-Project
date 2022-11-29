@@ -1,24 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public int _SecondsForWinScreen = 2;
-    public int _cantidadEnemigos = default;
+    [SerializeField] private int _secondsForWinScreen = 2;
+    [SerializeField] private int _enemyAmount = default;
     void Start()
     {
-        _cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        _enemyAmount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
     public void SubstractEnemyCounter()
     {
-        _cantidadEnemigos--;
+        _enemyAmount--;
     }
 
     private void Update()
     {
-        if (_cantidadEnemigos == 0)
+        if (_enemyAmount == 0)
         {
             StartCoroutine(WinScreen());
         }
@@ -26,7 +25,7 @@ public class GameOver : MonoBehaviour
 
     IEnumerator WinScreen()
     {
-        yield return new WaitForSeconds(_SecondsForWinScreen);
+        yield return new WaitForSeconds(_secondsForWinScreen);
         SceneManager.LoadScene("WinScreen");
     }
 }

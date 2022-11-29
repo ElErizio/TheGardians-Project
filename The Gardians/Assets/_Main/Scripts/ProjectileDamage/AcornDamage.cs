@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AcornDamage : MonoBehaviour
 {
-    public float _Dmg = 10f;
+    [SerializeField] private float _damage = 10f;
 
     // Funcion para que cuando colisione el poryectil haga X cantidad de daño
     private void OnCollisionEnter2D(Collision2D collision)
@@ -13,33 +11,33 @@ public class AcornDamage : MonoBehaviour
 
         if (enemy)
         {
-            enemy.TakeHit(_Dmg);
+            enemy.TakeHit(_damage);
         }
 
         var stoneWall = collision.collider.GetComponent<VidaStone>();
         if (stoneWall)
         {
-            stoneWall.TakeHit(_Dmg);
+            stoneWall.TakeHit(_damage);
         }
         var iceWall = collision.collider.GetComponent<VidaIce>();
         if (iceWall)
         {
-            iceWall.TakeHit(_Dmg);
+            iceWall.TakeHit(_damage);
         }
         var woodWall = collision.collider.GetComponent<VidaWood>();
         if (woodWall)
         {
-            woodWall.TakeHit(_Dmg);
+            woodWall.TakeHit(_damage);
         }
         var glassWall = collision.collider.GetComponent<VidaGlass>();
         if (glassWall)
         {
-            glassWall.TakeHit(_Dmg);
+            glassWall.TakeHit(_damage);
         }
         var bricksWall = collision.collider.GetComponent<VidaBricks>();
         if (bricksWall)
         {
-            bricksWall.TakeHit(_Dmg);
+            bricksWall.TakeHit(_damage);
         }
     }
 }
