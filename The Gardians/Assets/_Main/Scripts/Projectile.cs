@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     public float _maxDragDistance = 8.0f;
     // Valor para la cantidad de tiempo para liberar el proyectil del SpringJoint2D
     public float _releaseTime = .15f;
-
+    private Instanciador instanciador;
     private void Update()
     {
         if (_isPressed)
@@ -29,6 +29,11 @@ public class Projectile : MonoBehaviour
             }
         }
     }
+    private void Start()
+    { 
+        instanciador = Instanciador.Instance;
+    }
+        
 
     // Propiedades del projectile si es click es presionado
     private void OnMouseDown()
@@ -52,9 +57,11 @@ public class Projectile : MonoBehaviour
         GetComponent<SpringJoint2D>().enabled = false;
         this.enabled = false;
     }
-
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {       
         Destroy(gameObject, 3f);
+        instanciador.InstantiateProjectile();
     }
+    */
 }
