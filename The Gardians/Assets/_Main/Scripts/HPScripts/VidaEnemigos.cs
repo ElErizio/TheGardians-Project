@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VidaEnemigos : MonoBehaviour
 {
     // Variables necesarias para los puntos de vida del enemigo
-    public float _HP; //Puntos de vida
-    public float _MaxHP = 10; // Vida Maxima
+    [SerializeField] private float _HP; //Puntos de vida
+    [SerializeField] private float _MaxHP = 10; // Vida Maxima
     [SerializeField] private GameOver _gameOver;
 
     void Start()
@@ -15,9 +13,9 @@ public class VidaEnemigos : MonoBehaviour
         _HP = _MaxHP; 
     }
 
-    public void TakeHit(float dmg)
+    public void TakeHit(float damage)
     { 
-        _HP -= dmg;
+        _HP -= damage;
         if (_HP <= 0)
         {           
             _gameOver.SubstractEnemyCounter();

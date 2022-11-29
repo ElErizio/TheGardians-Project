@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VidaStone : MonoBehaviour
 {
     // Variables necesarias para los puntos de vida del Muro
-    public float _HP; //Puntos de vida
-    public float _MaxHP = 20; // Vida Maxima
+    [SerializeField] private float _HP; //Puntos de vida
+    [SerializeField] private float _MaxHP = 20; // Vida Maxima
 
     void Start()
     {
