@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour
 {
     // Bool para saber si el click es presionado
     [SerializeField] private bool _isPressed = false;
+    // Estas 2 variables no las puedo dejar privadas porque sino no funciona la resortera
     public Rigidbody2D _rigidBody;
     public Rigidbody2D _hook;
     [SerializeField] private float _maxDragDistance = 8.0f;

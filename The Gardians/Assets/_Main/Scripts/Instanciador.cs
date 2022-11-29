@@ -7,8 +7,8 @@ public class Instanciador : MonoBehaviour
     public static Instanciador Instance { get; private set; }
     [SerializeField] private GameObject _projectilePrefab;
     // Valores de el tiempo de espera de la camara antes de moverse, El Proyectil Al que vamos a seguir y La camara que se va a mover
-    [SerializeField] private int _tiempoEspera = 3;
-    [SerializeField] private CinemachineVirtualCamera _camara;
+    [SerializeField] private int _waitingTime = 3;
+    [SerializeField] private CinemachineVirtualCamera _camara = null;
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class Instanciador : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(_tiempoEspera);
+        yield return new WaitForSeconds(_waitingTime);
         InstantiateProjectile();
     }
 

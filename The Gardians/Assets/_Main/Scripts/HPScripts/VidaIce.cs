@@ -3,19 +3,19 @@ using UnityEngine;
 public class VidaIce : MonoBehaviour
 {
     // Variables necesarias para los puntos de vida del Muro
-    [SerializeField] private float _HP; //Puntos de vida
-    [SerializeField] private float _MaxHP = 3; // Vida Maxima
+    [SerializeField] private float _hp; //Puntos de vida
+    [SerializeField] private float _maxHP = 3; // Vida Maxima
 
     void Start()
     {
         // Indicamos recien ejecutado el proyecto que la vida del enemigo sea igual a la vida maxima
-        _HP = _MaxHP;
+        _hp = _maxHP;
     }
 
-    public void TakeHit(float dmg)
+    public void TakeHit(float damage)
     {
-        _HP -= dmg;
-        if (_HP <= 0)
+        _hp -= damage;
+        if (_hp <= 0)
         {
             Destroy(gameObject);
         }

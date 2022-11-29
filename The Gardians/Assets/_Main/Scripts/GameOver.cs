@@ -4,20 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] private int _SecondsForWinScreen = 2;
-    [SerializeField] private int _EnemyAmount = default;
+    [SerializeField] private int _secondsForWinScreen = 2;
+    [SerializeField] private int _enemyAmount = default;
     void Start()
     {
-        _EnemyAmount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        _enemyAmount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
     public void SubstractEnemyCounter()
     {
-        _EnemyAmount--;
+        _enemyAmount--;
     }
 
     private void Update()
     {
-        if (_EnemyAmount == 0)
+        if (_enemyAmount == 0)
         {
             StartCoroutine(WinScreen());
         }
@@ -25,7 +25,7 @@ public class GameOver : MonoBehaviour
 
     IEnumerator WinScreen()
     {
-        yield return new WaitForSeconds(_SecondsForWinScreen);
+        yield return new WaitForSeconds(_secondsForWinScreen);
         SceneManager.LoadScene("WinScreen");
     }
 }
