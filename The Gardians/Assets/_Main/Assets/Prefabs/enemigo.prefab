@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca1eee020143264eb4e3dbd3925df7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _HP: 0
-  _MaxHP: 10
+  hp: 0
+  _maxHP: 10
   _gameOver: {fileID: 1334902411209750164, guid: 73c0e026b0220fc4fb61a2f4f845ddea, type: 3}
+  pointsAmount: 150
+  score: {fileID: 2203227637399630405, guid: 548930e586c588e43b442f648dd92a63, type: 3}

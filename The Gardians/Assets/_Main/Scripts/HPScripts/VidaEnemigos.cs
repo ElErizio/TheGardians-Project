@@ -6,6 +6,9 @@ public class VidaEnemigos : MonoBehaviour
     [SerializeField] private float hp; //Puntos de vida
     [SerializeField] private float _maxHP = 10; // Vida Maxima
     [SerializeField] private GameOver _gameOver;
+    // Variables necesarias para el Score
+    [SerializeField] private float pointsAmount = 150;
+    [SerializeField] private Score score;
 
     void Start()
     {
@@ -19,6 +22,7 @@ public class VidaEnemigos : MonoBehaviour
         if (hp <= 0)
         {           
             _gameOver.SubstractEnemyCounter();
+            score.AddingPoints(pointsAmount);
             Destroy(gameObject);
         }
     }
@@ -32,6 +36,7 @@ public class VidaEnemigos : MonoBehaviour
     }
     void Die()
     {
+        score.AddingPoints(pointsAmount);
         _gameOver.SubstractEnemyCounter();
         Destroy(gameObject);
     }
