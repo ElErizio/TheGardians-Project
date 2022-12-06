@@ -146,6 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   _maxHP: 10
-  _gameOver: {fileID: 1334902411209750164, guid: 73c0e026b0220fc4fb61a2f4f845ddea, type: 3}
+  _gameOver: {fileID: 0}
   pointsAmount: 150
   score: {fileID: 2203227637399630405, guid: 548930e586c588e43b442f648dd92a63, type: 3}
