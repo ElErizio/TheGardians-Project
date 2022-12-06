@@ -23,4 +23,8 @@ public class BotonesMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void ResetButtom()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }    
 }
